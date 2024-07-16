@@ -1,0 +1,53 @@
+1-- in file: 
+vi include/linux/syscalls.h
+add at the end (before endif)
+
+asmlinkage long sys_my_mmap(unsigned long addr, unsigned long len,
+                                unsigned long prot, unsigned long flags,
+                                unsigned long fd, unsigned long pgoff);
+asmlinkage long sys_my_munmap(unsigned long addr, size_t len);
+
+
+2-- in file: 
+vi arch/x86/entry/syscalls/syscall_64.tbl 
+add at the end:
+
+548	64	my_mmap			sys_my_mmap
+549	64	my_munmap		sys_my_munmap
+
+3-- make a directory for the module (in this case my_mmap)
+
+4-- add the directory to core-y in the main Makefile 
+core-y                  += kernel/ certs/ mm/ fs/ ipc/ security/ crypto/ my_mmap/
+
+5-- make a Makefile (has only one line)
+$ cat Makefile 
+obj-y := my_mmap.o
+
+6--create the actual syscalls -- here is the code:
+
+
+
+#include <linux/kernel.h>
+#include <linux/mm.h>
+#include <linux/syscalls.h>
+
+SYSCALL_DEFINE6(my_mmap, unsigned long, addr, unsigned long, len,
+                unsigned long, prot, unsigned long, flags,
+                unsigned long, fd, unsigned long, off)
+{
+        if (off & ~PAGE_MASK)
+                return -EINVAL;
+
+        return ksys_mmap_pgoff(addr, len, prot, flags, fd, off >> PAGE_SHIFT);
+}
+
+
+SYSCALL_DEFINE2(my_munmap, unsigned long, addr, size_t, len)
+{
+        addr = untagged_addr(addr);
+//        profile_munmap(addr);
+        return vm_munmap(addr, len);
+}
+
+
