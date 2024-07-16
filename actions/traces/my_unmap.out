@@ -1,0 +1,59 @@
+CPU 0 is empty
+CPU 1 is empty
+CPU 2 is empty
+CPU 3 is empty
+CPU 4 is empty
+CPU 5 is empty
+CPU 6 is empty
+CPU 7 is empty
+CPU 8 is empty
+CPU 9 is empty
+CPU 10 is empty
+CPU 11 is empty
+CPU 12 is empty
+CPU 13 is empty
+CPU 14 is empty
+CPU 15 is empty
+CPU 16 is empty
+CPU 17 is empty
+CPU 18 is empty
+CPU 19 is empty
+CPU 20 is empty
+CPU 21 is empty
+CPU 22 is empty
+CPU 23 is empty
+CPU 24 is empty
+CPU 25 is empty
+CPU 26 is empty
+CPU 27 is empty
+CPU 28 is empty
+CPU 29 is empty
+CPU 30 is empty
+CPU 31 is empty
+CPU 32 is empty
+CPU 34 is empty
+CPU 35 is empty
+CPU 36 is empty
+CPU 37 is empty
+CPU 38 is empty
+CPU 39 is empty
+cpus=40
+           a.out-3379  [033]  5285.863144: funcgraph_entry:                   |  __x64_sys_my_munmap() {
+           a.out-3379  [033]  5285.863146: funcgraph_entry:                   |    vm_munmap() {
+           a.out-3379  [033]  5285.863147: funcgraph_entry:                   |      __vm_munmap() {
+           a.out-3379  [033]  5285.863148: funcgraph_entry:                   |        down_write_killable() {
+           a.out-3379  [033]  5285.863148: funcgraph_entry:                   |          __cond_resched() {
+           a.out-3379  [033]  5285.863149: funcgraph_entry:        0.734 us   |            rcu_all_qs();
+           a.out-3379  [033]  5285.863151: funcgraph_exit:         2.547 us   |          }
+           a.out-3379  [033]  5285.863152: funcgraph_exit:         4.014 us   |        }
+           a.out-3379  [033]  5285.863152: funcgraph_entry:                   |        __do_munmap() {
+           a.out-3379  [033]  5285.863153: funcgraph_entry:                   |          find_vma() {
+           a.out-3379  [033]  5285.863154: funcgraph_entry:        0.764 us   |            vmacache_find();
+           a.out-3379  [033]  5285.863155: funcgraph_entry:        0.616 us   |            vmacache_update();
+           a.out-3379  [033]  5285.863157: funcgraph_exit:         3.660 us   |          }
+           a.out-3379  [033]  5285.863157: funcgraph_exit:         4.999 us   |        }
+           a.out-3379  [033]  5285.863158: funcgraph_entry:        0.654 us   |        up_write();
+           a.out-3379  [033]  5285.863159: funcgraph_entry:        0.650 us   |        userfaultfd_unmap_complete();
+           a.out-3379  [033]  5285.863161: funcgraph_exit:       + 13.562 us  |      }
+           a.out-3379  [033]  5285.863161: funcgraph_exit:       + 15.298 us  |    }
+           a.out-3379  [033]  5285.863162: funcgraph_exit:       + 19.783 us  |  }

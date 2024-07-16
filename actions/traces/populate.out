@@ -1,0 +1,619 @@
+CPU 0 is empty
+CPU 2 is empty
+CPU 3 is empty
+CPU 4 is empty
+CPU 5 is empty
+CPU 6 is empty
+CPU 7 is empty
+CPU 8 is empty
+CPU 9 is empty
+CPU 10 is empty
+CPU 11 is empty
+CPU 12 is empty
+CPU 13 is empty
+CPU 14 is empty
+CPU 15 is empty
+CPU 16 is empty
+CPU 17 is empty
+CPU 18 is empty
+CPU 19 is empty
+CPU 20 is empty
+CPU 21 is empty
+CPU 22 is empty
+CPU 23 is empty
+CPU 24 is empty
+CPU 25 is empty
+CPU 26 is empty
+CPU 27 is empty
+CPU 28 is empty
+CPU 29 is empty
+CPU 30 is empty
+CPU 31 is empty
+CPU 32 is empty
+CPU 33 is empty
+CPU 34 is empty
+CPU 35 is empty
+CPU 36 is empty
+CPU 37 is empty
+CPU 38 is empty
+CPU 39 is empty
+cpus=40
+           a.out-3440  [001]  6652.325267: funcgraph_entry:                   |  __x64_sys_my_mmap() {
+           a.out-3440  [001]  6652.325269: funcgraph_entry:                   |    ksys_mmap_pgoff() {
+           a.out-3440  [001]  6652.325270: funcgraph_entry:                   |      vm_mmap_pgoff() {
+           a.out-3440  [001]  6652.325271: funcgraph_entry:                   |        security_mmap_file() {
+           a.out-3440  [001]  6652.325272: funcgraph_entry:        0.838 us   |          cap_mmap_file();
+           a.out-3440  [001]  6652.325273: funcgraph_entry:        0.747 us   |          apparmor_mmap_file();
+           a.out-3440  [001]  6652.325275: funcgraph_entry:        0.774 us   |          ima_file_mmap();
+           a.out-3440  [001]  6652.325276: funcgraph_exit:         5.806 us   |        }
+           a.out-3440  [001]  6652.325277: funcgraph_entry:                   |        down_write_killable() {
+           a.out-3440  [001]  6652.325278: funcgraph_entry:                   |          __cond_resched() {
+           a.out-3440  [001]  6652.325278: funcgraph_entry:        0.643 us   |            rcu_all_qs();
+           a.out-3440  [001]  6652.325280: funcgraph_exit:         1.905 us   |          }
+           a.out-3440  [001]  6652.325280: funcgraph_exit:         3.184 us   |        }
+           a.out-3440  [001]  6652.325281: funcgraph_entry:                   |        do_mmap() {
+           a.out-3440  [001]  6652.325282: funcgraph_entry:                   |          get_unmapped_area() {
+           a.out-3440  [001]  6652.325282: funcgraph_entry:                   |            arch_get_unmapped_area_topdown() {
+           a.out-3440  [001]  6652.325283: funcgraph_entry:        0.710 us   |              get_mmap_base();
+           a.out-3440  [001]  6652.325284: funcgraph_entry:        0.955 us   |              vm_unmapped_area();
+           a.out-3440  [001]  6652.325286: funcgraph_exit:         3.692 us   |            }
+           a.out-3440  [001]  6652.325287: funcgraph_entry:                   |            security_mmap_addr() {
+           a.out-3440  [001]  6652.325287: funcgraph_entry:        0.640 us   |              cap_mmap_addr();
+           a.out-3440  [001]  6652.325289: funcgraph_exit:         1.960 us   |            }
+           a.out-3440  [001]  6652.325289: funcgraph_exit:         7.619 us   |          }
+           a.out-3440  [001]  6652.325290: funcgraph_entry:                   |          mmap_region() {
+           a.out-3440  [001]  6652.325291: funcgraph_entry:        0.691 us   |            may_expand_vm();
+           a.out-3440  [001]  6652.325292: funcgraph_entry:                   |            security_vm_enough_memory_mm() {
+           a.out-3440  [001]  6652.325293: funcgraph_entry:        0.664 us   |              cap_vm_enough_memory();
+           a.out-3440  [001]  6652.325294: funcgraph_entry:        0.665 us   |              __vm_enough_memory();
+           a.out-3440  [001]  6652.325295: funcgraph_exit:         3.287 us   |            }
+           a.out-3440  [001]  6652.325296: funcgraph_entry:                   |            vma_merge() {
+           a.out-3440  [001]  6652.325297: funcgraph_entry:        0.665 us   |              can_vma_merge_before();
+           a.out-3440  [001]  6652.325298: funcgraph_exit:         2.045 us   |            }
+           a.out-3440  [001]  6652.325299: funcgraph_entry:                   |            vm_area_alloc() {
+           a.out-3440  [001]  6652.325299: funcgraph_entry:                   |              kmem_cache_alloc() {
+           a.out-3440  [001]  6652.325300: funcgraph_entry:                   |                __cond_resched() {
+           a.out-3440  [001]  6652.325301: funcgraph_entry:        0.717 us   |                  rcu_all_qs();
+           a.out-3440  [001]  6652.325302: funcgraph_exit:         1.979 us   |                }
+           a.out-3440  [001]  6652.325303: funcgraph_entry:        0.635 us   |                should_failslab();
+           a.out-3440  [001]  6652.325304: funcgraph_entry:        0.644 us   |                rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325305: funcgraph_entry:        0.635 us   |                rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325307: funcgraph_entry:        0.694 us   |                obj_cgroup_charge();
+           a.out-3440  [001]  6652.325308: funcgraph_entry:        0.636 us   |                rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325309: funcgraph_entry:        0.702 us   |                mod_objcg_state();
+           a.out-3440  [001]  6652.325311: funcgraph_entry:        0.635 us   |                rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325312: funcgraph_exit:       + 12.501 us  |              }
+           a.out-3440  [001]  6652.325313: funcgraph_exit:       + 13.820 us  |            }
+           a.out-3440  [001]  6652.325313: funcgraph_entry:                   |            vma_link() {
+           a.out-3440  [001]  6652.325314: funcgraph_entry:        0.640 us   |              __vma_link_list();
+           a.out-3440  [001]  6652.325315: funcgraph_entry:        0.664 us   |              __vma_link_file();
+           a.out-3440  [001]  6652.325317: funcgraph_exit:         3.522 us   |            }
+           a.out-3440  [001]  6652.325318: funcgraph_entry:                   |            vma_set_page_prot() {
+           a.out-3440  [001]  6652.325318: funcgraph_entry:        0.640 us   |              vma_wants_writenotify();
+           a.out-3440  [001]  6652.325320: funcgraph_exit:         2.006 us   |            }
+           a.out-3440  [001]  6652.325320: funcgraph_exit:       + 30.207 us  |          }
+           a.out-3440  [001]  6652.325321: funcgraph_exit:       + 39.924 us  |        }
+           a.out-3440  [001]  6652.325322: funcgraph_entry:        0.655 us   |        up_write();
+           a.out-3440  [001]  6652.325323: funcgraph_entry:        0.710 us   |        userfaultfd_unmap_complete();
+           a.out-3440  [001]  6652.325324: funcgraph_entry:                   |        __mm_populate() {
+           a.out-3440  [001]  6652.325325: funcgraph_entry:                   |          down_read() {
+           a.out-3440  [001]  6652.325326: funcgraph_entry:                   |            __cond_resched() {
+           a.out-3440  [001]  6652.325326: funcgraph_entry:        0.635 us   |              rcu_all_qs();
+           a.out-3440  [001]  6652.325327: funcgraph_exit:         1.956 us   |            }
+           a.out-3440  [001]  6652.325328: funcgraph_exit:         3.276 us   |          }
+           a.out-3440  [001]  6652.325329: funcgraph_entry:                   |          find_vma() {
+           a.out-3440  [001]  6652.325329: funcgraph_entry:        0.787 us   |            vmacache_find();
+           a.out-3440  [001]  6652.325331: funcgraph_entry:        0.639 us   |            vmacache_update();
+           a.out-3440  [001]  6652.325332: funcgraph_exit:         3.486 us   |          }
+           a.out-3440  [001]  6652.325333: funcgraph_entry:                   |          populate_vma_page_range() {
+           a.out-3440  [001]  6652.325334: funcgraph_entry:                   |            __get_user_pages() {
+           a.out-3440  [001]  6652.325335: funcgraph_entry:                   |              find_extend_vma() {
+           a.out-3440  [001]  6652.325335: funcgraph_entry:                   |                find_vma() {
+           a.out-3440  [001]  6652.325336: funcgraph_entry:        0.688 us   |                  vmacache_find();
+           a.out-3440  [001]  6652.325337: funcgraph_exit:         1.973 us   |                }
+           a.out-3440  [001]  6652.325338: funcgraph_exit:         3.240 us   |              }
+           a.out-3440  [001]  6652.325338: funcgraph_entry:                   |              check_vma_flags() {
+           a.out-3440  [001]  6652.325339: funcgraph_entry:        0.643 us   |                vma_is_secretmem();
+           a.out-3440  [001]  6652.325341: funcgraph_exit:         2.154 us   |              }
+           a.out-3440  [001]  6652.325341: funcgraph_entry:                   |              __cond_resched() {
+           a.out-3440  [001]  6652.325342: funcgraph_entry:        0.642 us   |                rcu_all_qs();
+           a.out-3440  [001]  6652.325343: funcgraph_exit:         1.916 us   |              }
+           a.out-3440  [001]  6652.325344: funcgraph_entry:                   |              follow_page_mask() {
+           a.out-3440  [001]  6652.325345: funcgraph_entry:        0.644 us   |                follow_huge_addr();
+           a.out-3440  [001]  6652.325346: funcgraph_entry:        0.640 us   |                pud_huge();
+           a.out-3440  [001]  6652.325347: funcgraph_entry:        0.655 us   |                pmd_huge();
+           a.out-3440  [001]  6652.325349: funcgraph_entry:                   |                follow_page_pte() {
+           a.out-3440  [001]  6652.325350: funcgraph_entry:        0.675 us   |                  _raw_spin_lock();
+           a.out-3440  [001]  6652.325351: funcgraph_exit:         2.090 us   |                }
+           a.out-3440  [001]  6652.325352: funcgraph_exit:         7.698 us   |              }
+           a.out-3440  [001]  6652.325356: funcgraph_entry:        0.870 us   |              irq_enter_rcu();
+           a.out-3440  [001]  6652.325357: funcgraph_entry:                   |              __sysvec_irq_work() {
+           a.out-3440  [001]  6652.325358: funcgraph_entry:                   |                __wake_up() {
+           a.out-3440  [001]  6652.325359: funcgraph_entry:                   |                  __wake_up_common_lock() {
+           a.out-3440  [001]  6652.325360: funcgraph_entry:        0.659 us   |                    _raw_spin_lock_irqsave();
+           a.out-3440  [001]  6652.325361: funcgraph_entry:        0.716 us   |                    __wake_up_common();
+           a.out-3440  [001]  6652.325363: funcgraph_entry:        0.665 us   |                    _raw_spin_unlock_irqrestore();
+           a.out-3440  [001]  6652.325364: funcgraph_exit:         4.750 us   |                  }
+           a.out-3440  [001]  6652.325364: funcgraph_exit:         6.018 us   |                }
+           a.out-3440  [001]  6652.325365: funcgraph_entry:                   |                __wake_up() {
+           a.out-3440  [001]  6652.325366: funcgraph_entry:                   |                  __wake_up_common_lock() {
+           a.out-3440  [001]  6652.325366: funcgraph_entry:        0.655 us   |                    _raw_spin_lock_irqsave();
+           a.out-3440  [001]  6652.325368: funcgraph_entry:                   |                    __wake_up_common() {
+           a.out-3440  [001]  6652.325369: funcgraph_entry:                   |                      autoremove_wake_function() {
+           a.out-3440  [001]  6652.325370: funcgraph_entry:                   |                        default_wake_function() {
+           a.out-3440  [001]  6652.325371: funcgraph_entry:                   |                          try_to_wake_up() {
+           a.out-3440  [001]  6652.325371: funcgraph_entry:        1.064 us   |                            _raw_spin_lock_irqsave();
+           a.out-3440  [001]  6652.325373: funcgraph_entry:        1.185 us   |                            __traceiter_sched_waking();
+           a.out-3440  [001]  6652.325375: funcgraph_entry:                   |                            select_task_rq_fair() {
+           a.out-3440  [001]  6652.325377: funcgraph_entry:        0.727 us   |                              available_idle_cpu();
+           a.out-3440  [001]  6652.325378: funcgraph_entry:        0.885 us   |                              available_idle_cpu();
+           a.out-3440  [001]  6652.325379: funcgraph_entry:        0.660 us   |                              available_idle_cpu();
+           a.out-3440  [001]  6652.325381: funcgraph_entry:        0.640 us   |                              rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325382: funcgraph_exit:         6.769 us   |                            }
+           a.out-3440  [001]  6652.325383: funcgraph_entry:                   |                            ttwu_queue_wakelist() {
+           a.out-3440  [001]  6652.325384: funcgraph_entry:                   |                              __smp_call_single_queue() {
+           a.out-3440  [001]  6652.325385: funcgraph_entry:        1.214 us   |                                send_call_function_single_ipi();
+           a.out-3440  [001]  6652.325386: funcgraph_exit:         2.880 us   |                              }
+           a.out-3440  [001]  6652.325387: funcgraph_exit:         4.380 us   |                            }
+           a.out-3440  [001]  6652.325388: funcgraph_entry:        0.667 us   |                            _raw_spin_unlock_irqrestore();
+           a.out-3440  [001]  6652.325389: funcgraph_exit:       + 18.558 us  |                          }
+           a.out-3440  [001]  6652.325390: funcgraph_exit:       + 19.963 us  |                        }
+           a.out-3440  [001]  6652.325390: funcgraph_exit:       + 21.398 us  |                      }
+           a.out-3440  [001]  6652.325391: funcgraph_exit:       + 23.185 us  |                    }
+           a.out-3440  [001]  6652.325392: funcgraph_entry:        0.648 us   |                    _raw_spin_unlock_irqrestore();
+           a.out-3440  [001]  6652.325393: funcgraph_exit:       + 27.186 us  |                  }
+           a.out-3440  [001]  6652.325394: funcgraph_exit:       + 28.454 us  |                }
+           a.out-3440  [001]  6652.325394: funcgraph_exit:       + 37.036 us  |              }
+           a.out-3440  [001]  6652.325395: funcgraph_entry:                   |              irq_exit_rcu() {
+           a.out-3440  [001]  6652.325396: funcgraph_entry:        0.649 us   |                idle_cpu();
+           a.out-3440  [001]  6652.325397: funcgraph_exit:         1.964 us   |              }
+           a.out-3440  [001]  6652.325398: funcgraph_entry:                   |              handle_mm_fault() {
+           a.out-3440  [001]  6652.325399: funcgraph_entry:        0.650 us   |                mem_cgroup_from_task();
+           a.out-3440  [001]  6652.325400: funcgraph_entry:                   |                __count_memcg_events() {
+           a.out-3440  [001]  6652.325401: funcgraph_entry:        0.691 us   |                  cgroup_rstat_updated();
+           a.out-3440  [001]  6652.325402: funcgraph_exit:         2.060 us   |                }
+           a.out-3440  [001]  6652.325403: funcgraph_entry:        0.711 us   |                rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325405: funcgraph_entry:                   |                __handle_mm_fault() {
+           a.out-3440  [001]  6652.325406: funcgraph_entry:                   |                  __anon_vma_prepare() {
+           a.out-3440  [001]  6652.325406: funcgraph_entry:                   |                    __cond_resched() {
+           a.out-3440  [001]  6652.325407: funcgraph_entry:        0.653 us   |                      rcu_all_qs();
+           a.out-3440  [001]  6652.325408: funcgraph_exit:         1.965 us   |                    }
+           a.out-3440  [001]  6652.325409: funcgraph_entry:                   |                    kmem_cache_alloc() {
+           a.out-3440  [001]  6652.325410: funcgraph_entry:                   |                      __cond_resched() {
+           a.out-3440  [001]  6652.325410: funcgraph_entry:        0.642 us   |                        rcu_all_qs();
+           a.out-3440  [001]  6652.325412: funcgraph_exit:         1.937 us   |                      }
+           a.out-3440  [001]  6652.325412: funcgraph_entry:        0.653 us   |                      should_failslab();
+           a.out-3440  [001]  6652.325414: funcgraph_entry:        0.644 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325415: funcgraph_entry:        0.644 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325416: funcgraph_entry:        0.665 us   |                      obj_cgroup_charge();
+           a.out-3440  [001]  6652.325418: funcgraph_entry:        0.644 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325419: funcgraph_entry:        0.747 us   |                      mod_objcg_state();
+           a.out-3440  [001]  6652.325420: funcgraph_entry:        0.644 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325422: funcgraph_exit:       + 12.605 us  |                    }
+           a.out-3440  [001]  6652.325422: funcgraph_entry:                   |                    find_mergeable_anon_vma() {
+           a.out-3440  [001]  6652.325423: funcgraph_entry:        0.698 us   |                      anon_vma_compatible();
+           a.out-3440  [001]  6652.325424: funcgraph_entry:        0.657 us   |                      anon_vma_compatible();
+           a.out-3440  [001]  6652.325426: funcgraph_exit:         3.284 us   |                    }
+           a.out-3440  [001]  6652.325426: funcgraph_entry:                   |                    kmem_cache_alloc() {
+           a.out-3440  [001]  6652.325427: funcgraph_entry:                   |                      __cond_resched() {
+           a.out-3440  [001]  6652.325428: funcgraph_entry:        0.762 us   |                        rcu_all_qs();
+           a.out-3440  [001]  6652.325430: funcgraph_exit:         2.668 us   |                      }
+           a.out-3440  [001]  6652.325431: funcgraph_entry:        0.639 us   |                      should_failslab();
+           a.out-3440  [001]  6652.325432: funcgraph_entry:        0.642 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325434: funcgraph_entry:        0.644 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325435: funcgraph_entry:        0.659 us   |                      obj_cgroup_charge();
+           a.out-3440  [001]  6652.325436: funcgraph_entry:        0.643 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325438: funcgraph_entry:                   |                      mod_objcg_state() {
+           a.out-3440  [001]  6652.325438: funcgraph_entry:                   |                        __mod_memcg_lruvec_state() {
+           a.out-3440  [001]  6652.325439: funcgraph_entry:        0.686 us   |                          cgroup_rstat_updated();
+           a.out-3440  [001]  6652.325440: funcgraph_exit:         2.040 us   |                        }
+           a.out-3440  [001]  6652.325441: funcgraph_entry:        0.643 us   |                        rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325443: funcgraph_exit:         4.789 us   |                      }
+           a.out-3440  [001]  6652.325444: funcgraph_entry:        0.875 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325445: funcgraph_exit:       + 19.189 us  |                    }
+           a.out-3440  [001]  6652.325446: funcgraph_entry:                   |                    down_write() {
+           a.out-3440  [001]  6652.325447: funcgraph_entry:                   |                      __cond_resched() {
+           a.out-3440  [001]  6652.325447: funcgraph_entry:        0.640 us   |                        rcu_all_qs();
+           a.out-3440  [001]  6652.325449: funcgraph_exit:         1.920 us   |                      }
+           a.out-3440  [001]  6652.325449: funcgraph_exit:         3.211 us   |                    }
+           a.out-3440  [001]  6652.325450: funcgraph_entry:        0.645 us   |                    _raw_spin_lock();
+           a.out-3440  [001]  6652.325451: funcgraph_entry:        0.763 us   |                    anon_vma_interval_tree_insert();
+           a.out-3440  [001]  6652.325453: funcgraph_entry:        0.651 us   |                    up_write();
+           a.out-3440  [001]  6652.325454: funcgraph_exit:       + 48.127 us  |                  }
+           a.out-3440  [001]  6652.325455: funcgraph_entry:                   |                  alloc_pages_vma() {
+           a.out-3440  [001]  6652.325455: funcgraph_entry:        0.649 us   |                    __get_vma_policy();
+           a.out-3440  [001]  6652.325457: funcgraph_entry:        0.650 us   |                    policy_nodemask();
+           a.out-3440  [001]  6652.325458: funcgraph_entry:                   |                    __alloc_pages() {
+           a.out-3440  [001]  6652.325459: funcgraph_entry:                   |                      __cond_resched() {
+           a.out-3440  [001]  6652.325459: funcgraph_entry:        0.640 us   |                        rcu_all_qs();
+           a.out-3440  [001]  6652.325460: funcgraph_exit:         1.917 us   |                      }
+           a.out-3440  [001]  6652.325461: funcgraph_entry:        0.640 us   |                      should_fail_alloc_page();
+           a.out-3440  [001]  6652.325462: funcgraph_entry:                   |                      get_page_from_freelist() {
+           a.out-3440  [001]  6652.325463: funcgraph_entry:        1.136 us   |                        kernel_init_free_pages.part.0();
+           a.out-3440  [001]  6652.325465: funcgraph_exit:         3.005 us   |                      }
+           a.out-3440  [001]  6652.325466: funcgraph_exit:         8.288 us   |                    }
+           a.out-3440  [001]  6652.325467: funcgraph_exit:       + 12.209 us  |                  }
+           a.out-3440  [001]  6652.325467: funcgraph_entry:                   |                  __mem_cgroup_charge() {
+           a.out-3440  [001]  6652.325468: funcgraph_entry:                   |                    get_mem_cgroup_from_mm() {
+           a.out-3440  [001]  6652.325469: funcgraph_entry:        0.645 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325470: funcgraph_entry:        0.645 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325471: funcgraph_exit:         3.212 us   |                    }
+           a.out-3440  [001]  6652.325472: funcgraph_entry:                   |                    charge_memcg() {
+           a.out-3440  [001]  6652.325473: funcgraph_entry:                   |                      try_charge_memcg() {
+           a.out-3440  [001]  6652.325473: funcgraph_entry:        0.640 us   |                        do_memsw_account();
+           a.out-3440  [001]  6652.325475: funcgraph_entry:        0.725 us   |                        irq_enter_rcu();
+           a.out-3440  [001]  6652.325477: funcgraph_entry:                   |                        __sysvec_apic_timer_interrupt() {
+           a.out-3440  [001]  6652.325478: funcgraph_entry:                   |                          hrtimer_interrupt() {
+           a.out-3440  [001]  6652.325479: funcgraph_entry:        0.703 us   |                            _raw_spin_lock_irqsave();
+           a.out-3440  [001]  6652.325480: funcgraph_entry:        0.882 us   |                            ktime_get_update_offsets_now();
+           a.out-3440  [001]  6652.325482: funcgraph_entry:                   |                            __hrtimer_run_queues() {
+           a.out-3440  [001]  6652.325482: funcgraph_entry:        0.926 us   |                              __remove_hrtimer();
+           a.out-3440  [001]  6652.325484: funcgraph_entry:        0.645 us   |                              _raw_spin_unlock_irqrestore();
+           a.out-3440  [001]  6652.325485: funcgraph_entry:                   |                              tick_sched_timer() {
+           a.out-3440  [001]  6652.325486: funcgraph_entry:        0.750 us   |                                ktime_get();
+           a.out-3440  [001]  6652.325487: funcgraph_entry:                   |                                tick_sched_do_timer() {
+           a.out-3440  [001]  6652.325488: funcgraph_entry:                   |                                  tick_do_update_jiffies64() {
+           a.out-3440  [001]  6652.325489: funcgraph_entry:        1.356 us   |                                    _raw_spin_lock();
+           a.out-3440  [001]  6652.325491: funcgraph_entry:        0.807 us   |                                    calc_global_load();
+           a.out-3440  [001]  6652.325492: funcgraph_entry:                   |                                    update_wall_time() {
+           a.out-3440  [001]  6652.325493: funcgraph_entry:                   |                                      timekeeping_advance() {
+           a.out-3440  [001]  6652.325494: funcgraph_entry:        0.931 us   |                                        _raw_spin_lock_irqsave();
+           a.out-3440  [001]  6652.325496: funcgraph_entry:        0.680 us   |                                        ntp_tick_length();
+           a.out-3440  [001]  6652.325497: funcgraph_entry:        0.752 us   |                                        ntp_tick_length();
+           a.out-3440  [001]  6652.325499: funcgraph_entry:                   |                                        timekeeping_update() {
+           a.out-3440  [001]  6652.325499: funcgraph_entry:        0.646 us   |                                          ntp_get_next_leap();
+           a.out-3440  [001]  6652.325501: funcgraph_entry:        1.206 us   |                                          update_vsyscall();
+           a.out-3440  [001]  6652.325502: funcgraph_entry:                   |                                          raw_notifier_call_chain() {
+           a.out-3440  [001]  6652.325503: funcgraph_entry:        0.941 us   |                                            pvclock_gtod_notify();
+           a.out-3440  [001]  6652.325505: funcgraph_exit:         2.596 us   |                                          }
+           a.out-3440  [001]  6652.325506: funcgraph_entry:        0.857 us   |                                          update_fast_timekeeper();
+           a.out-3440  [001]  6652.325507: funcgraph_entry:        1.141 us   |                                          update_fast_timekeeper();
+           a.out-3440  [001]  6652.325509: funcgraph_exit:       + 10.389 us  |                                        }
+           a.out-3440  [001]  6652.325510: funcgraph_entry:        1.031 us   |                                        _raw_spin_unlock_irqrestore();
+           a.out-3440  [001]  6652.325511: funcgraph_exit:       + 18.378 us  |                                      }
+           a.out-3440  [001]  6652.325512: funcgraph_exit:       + 19.729 us  |                                    }
+           a.out-3440  [001]  6652.325513: funcgraph_exit:       + 24.665 us  |                                  }
+           a.out-3440  [001]  6652.325514: funcgraph_exit:       + 26.200 us  |                                }
+           a.out-3440  [001]  6652.325514: funcgraph_entry:                   |                                tick_sched_handle() {
+           a.out-3440  [001]  6652.325515: funcgraph_entry:                   |                                  update_process_times() {
+           a.out-3440  [001]  6652.325516: funcgraph_entry:                   |                                    account_process_tick() {
+           a.out-3440  [001]  6652.325516: funcgraph_entry:                   |                                      account_system_time() {
+           a.out-3440  [001]  6652.325517: funcgraph_entry:                   |                                        account_system_index_time() {
+           a.out-3440  [001]  6652.325518: funcgraph_entry:                   |                                          cpuacct_account_field() {
+           a.out-3440  [001]  6652.325518: funcgraph_entry:        0.646 us   |                                            rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325520: funcgraph_exit:         1.965 us   |                                          }
+           a.out-3440  [001]  6652.325520: funcgraph_entry:                   |                                          __cgroup_account_cputime_field() {
+           a.out-3440  [001]  6652.325521: funcgraph_entry:        0.659 us   |                                            cgroup_rstat_updated();
+           a.out-3440  [001]  6652.325522: funcgraph_exit:         1.965 us   |                                          }
+           a.out-3440  [001]  6652.325523: funcgraph_entry:        0.645 us   |                                          rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325524: funcgraph_entry:        0.659 us   |                                          acct_account_cputime();
+           a.out-3440  [001]  6652.325526: funcgraph_exit:         8.576 us   |                                        }
+           a.out-3440  [001]  6652.325526: funcgraph_exit:         9.894 us   |                                      }
+           a.out-3440  [001]  6652.325527: funcgraph_exit:       + 11.246 us  |                                    }
+           a.out-3440  [001]  6652.325528: funcgraph_entry:        0.645 us   |                                    hrtimer_run_queues();
+           a.out-3440  [001]  6652.325529: funcgraph_entry:                   |                                    raise_softirq() {
+           a.out-3440  [001]  6652.325530: funcgraph_entry:        0.653 us   |                                      __raise_softirq_irqoff();
+           a.out-3440  [001]  6652.325531: funcgraph_exit:         1.960 us   |                                    }
+           a.out-3440  [001]  6652.325532: funcgraph_entry:                   |                                    rcu_sched_clock_irq() {
+           a.out-3440  [001]  6652.325533: funcgraph_entry:        0.756 us   |                                      rcu_segcblist_ready_cbs();
+           a.out-3440  [001]  6652.325535: funcgraph_entry:                   |                                      invoke_rcu_core() {
+           a.out-3440  [001]  6652.325535: funcgraph_entry:                   |                                        raise_softirq() {
+           a.out-3440  [001]  6652.325536: funcgraph_entry:        0.651 us   |                                          __raise_softirq_irqoff();
+           a.out-3440  [001]  6652.325537: funcgraph_exit:         1.944 us   |                                        }
+           a.out-3440  [001]  6652.325538: funcgraph_exit:         3.365 us   |                                      }
+           a.out-3440  [001]  6652.325538: funcgraph_exit:         6.498 us   |                                    }
+           a.out-3440  [001]  6652.325539: funcgraph_entry:                   |                                    scheduler_tick() {
+           a.out-3440  [001]  6652.325540: funcgraph_entry:        0.991 us   |                                      arch_scale_freq_tick();
+           a.out-3440  [001]  6652.325542: funcgraph_entry:                   |                                      raw_spin_rq_lock_nested() {
+           a.out-3440  [001]  6652.325542: funcgraph_entry:        0.657 us   |                                        _raw_spin_lock();
+           a.out-3440  [001]  6652.325544: funcgraph_exit:         1.969 us   |                                      }
+           a.out-3440  [001]  6652.325544: funcgraph_entry:        0.765 us   |                                      update_rq_clock();
+           a.out-3440  [001]  6652.325546: funcgraph_entry:                   |                                      task_tick_fair() {
+           a.out-3440  [001]  6652.325546: funcgraph_entry:                   |                                        update_curr() {
+           a.out-3440  [001]  6652.325547: funcgraph_entry:        0.657 us   |                                          update_min_vruntime();
+           a.out-3440  [001]  6652.325549: funcgraph_entry:        0.685 us   |                                          cpuacct_charge();
+           a.out-3440  [001]  6652.325550: funcgraph_entry:                   |                                          __cgroup_account_cputime() {
+           a.out-3440  [001]  6652.325551: funcgraph_entry:        0.659 us   |                                            cgroup_rstat_updated();
+           a.out-3440  [001]  6652.325552: funcgraph_exit:         1.946 us   |                                          }
+           a.out-3440  [001]  6652.325552: funcgraph_exit:         6.018 us   |                                        }
+           a.out-3440  [001]  6652.325553: funcgraph_entry:        0.891 us   |                                        __update_load_avg_se();
+           a.out-3440  [001]  6652.325555: funcgraph_entry:        0.899 us   |                                        __update_load_avg_cfs_rq();
+           a.out-3440  [001]  6652.325557: funcgraph_entry:        0.642 us   |                                        update_cfs_group();
+           a.out-3440  [001]  6652.325558: funcgraph_entry:        0.699 us   |                                        hrtimer_active();
+           a.out-3440  [001]  6652.325560: funcgraph_entry:                   |                                        update_curr() {
+           a.out-3440  [001]  6652.325560: funcgraph_entry:        0.746 us   |                                          __calc_delta();
+           a.out-3440  [001]  6652.325562: funcgraph_entry:        0.655 us   |                                          update_min_vruntime();
+           a.out-3440  [001]  6652.325563: funcgraph_exit:         3.487 us   |                                        }
+           a.out-3440  [001]  6652.325564: funcgraph_entry:        0.835 us   |                                        __update_load_avg_se();
+           a.out-3440  [001]  6652.325565: funcgraph_entry:        0.836 us   |                                        __update_load_avg_cfs_rq();
+           a.out-3440  [001]  6652.325567: funcgraph_entry:                   |                                        update_cfs_group() {
+           a.out-3440  [001]  6652.325568: funcgraph_entry:                   |                                          reweight_entity() {
+           a.out-3440  [001]  6652.325569: funcgraph_entry:        0.691 us   |                                            update_curr();
+           a.out-3440  [001]  6652.325570: funcgraph_exit:         2.191 us   |                                          }
+           a.out-3440  [001]  6652.325571: funcgraph_exit:         3.546 us   |                                        }
+           a.out-3440  [001]  6652.325571: funcgraph_entry:        0.654 us   |                                        hrtimer_active();
+           a.out-3440  [001]  6652.325573: funcgraph_exit:       + 26.999 us  |                                      }
+           a.out-3440  [001]  6652.325573: funcgraph_entry:        0.694 us   |                                      calc_global_load_tick();
+           a.out-3440  [001]  6652.325575: funcgraph_entry:        0.645 us   |                                      raw_spin_rq_unlock();
+           a.out-3440  [001]  6652.325576: funcgraph_entry:                   |                                      trigger_load_balance() {
+           a.out-3440  [001]  6652.325577: funcgraph_entry:        0.705 us   |                                        nohz_balance_exit_idle();
+           a.out-3440  [001]  6652.325578: funcgraph_entry:        0.645 us   |                                        rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325580: funcgraph_exit:         3.508 us   |                                      }
+           a.out-3440  [001]  6652.325580: funcgraph_exit:       + 41.025 us  |                                    }
+           a.out-3440  [001]  6652.325581: funcgraph_entry:        0.790 us   |                                    run_posix_cpu_timers();
+           a.out-3440  [001]  6652.325582: funcgraph_exit:       + 67.364 us  |                                  }
+           a.out-3440  [001]  6652.325583: funcgraph_entry:        0.653 us   |                                  profile_tick();
+           a.out-3440  [001]  6652.325584: funcgraph_exit:       + 70.089 us  |                                }
+           a.out-3440  [001]  6652.325585: funcgraph_entry:        0.650 us   |                                hrtimer_forward();
+           a.out-3440  [001]  6652.325586: funcgraph_exit:       ! 100.970 us |                              }
+           a.out-3440  [001]  6652.325587: funcgraph_entry:        0.645 us   |                              _raw_spin_lock_irq();
+           a.out-3440  [001]  6652.325588: funcgraph_entry:        0.830 us   |                              enqueue_hrtimer();
+           a.out-3440  [001]  6652.325590: funcgraph_exit:       ! 108.230 us |                            }
+           a.out-3440  [001]  6652.325591: funcgraph_entry:                   |                            hrtimer_update_next_event() {
+           a.out-3440  [001]  6652.325591: funcgraph_entry:        0.684 us   |                              __hrtimer_next_event_base();
+           a.out-3440  [001]  6652.325593: funcgraph_entry:        0.713 us   |                              __hrtimer_next_event_base();
+           a.out-3440  [001]  6652.325594: funcgraph_exit:         3.356 us   |                            }
+           a.out-3440  [001]  6652.325595: funcgraph_entry:        0.640 us   |                            _raw_spin_unlock_irqrestore();
+           a.out-3440  [001]  6652.325596: funcgraph_entry:                   |                            tick_program_event() {
+           a.out-3440  [001]  6652.325597: funcgraph_entry:                   |                              clockevents_program_event() {
+           a.out-3440  [001]  6652.325597: funcgraph_entry:        0.926 us   |                                ktime_get();
+           a.out-3440  [001]  6652.325599: funcgraph_entry:        0.977 us   |                                lapic_next_deadline();
+           a.out-3440  [001]  6652.325601: funcgraph_exit:         3.956 us   |                              }
+           a.out-3440  [001]  6652.325601: funcgraph_exit:         5.372 us   |                            }
+           a.out-3440  [001]  6652.325602: funcgraph_exit:       ! 123.940 us |                          }
+           a.out-3440  [001]  6652.325602: funcgraph_exit:       ! 125.633 us |                        }
+           a.out-3440  [001]  6652.325603: funcgraph_entry:                   |                        irq_exit_rcu() {
+           a.out-3440  [001]  6652.325604: funcgraph_entry:                   |                          __do_softirq() {
+           a.out-3440  [001]  6652.325605: funcgraph_entry:                   |                            run_timer_softirq() {
+           a.out-3440  [001]  6652.325606: funcgraph_entry:        0.726 us   |                              _raw_spin_lock_irq();
+           a.out-3440  [001]  6652.325607: funcgraph_entry:        1.548 us   |                              __next_timer_interrupt();
+           a.out-3440  [001]  6652.325609: funcgraph_entry:                   |                              call_timer_fn() {
+           a.out-3440  [001]  6652.325610: funcgraph_entry:                   |                                delayed_work_timer_fn() {
+           a.out-3440  [001]  6652.325611: funcgraph_entry:                   |                                  __queue_work() {
+           a.out-3440  [001]  6652.325612: funcgraph_entry:        0.880 us   |                                    _raw_spin_lock();
+           a.out-3440  [001]  6652.325614: funcgraph_entry:        0.676 us   |                                    _raw_spin_lock();
+           a.out-3440  [001]  6652.325615: funcgraph_entry:                   |                                    insert_work() {
+           a.out-3440  [001]  6652.325616: funcgraph_entry:                   |                                      wake_up_process() {
+           a.out-3440  [001]  6652.325617: funcgraph_entry:                   |                                        try_to_wake_up() {
+           a.out-3440  [001]  6652.325617: funcgraph_entry:        0.791 us   |                                          _raw_spin_lock_irqsave();
+           a.out-3440  [001]  6652.325619: funcgraph_entry:        1.410 us   |                                          __traceiter_sched_waking();
+           a.out-3440  [001]  6652.325621: funcgraph_entry:        0.811 us   |                                          kthread_is_per_cpu();
+           a.out-3440  [001]  6652.325622: funcgraph_entry:        0.777 us   |                                          ttwu_queue_wakelist();
+           a.out-3440  [001]  6652.325624: funcgraph_entry:                   |                                          raw_spin_rq_lock_nested() {
+           a.out-3440  [001]  6652.325624: funcgraph_entry:        0.656 us   |                                            _raw_spin_lock();
+           a.out-3440  [001]  6652.325626: funcgraph_exit:         1.931 us   |                                          }
+           a.out-3440  [001]  6652.325626: funcgraph_entry:        0.739 us   |                                          update_rq_clock();
+           a.out-3440  [001]  6652.325628: funcgraph_entry:                   |                                          ttwu_do_activate() {
+           a.out-3440  [001]  6652.325629: funcgraph_entry:                   |                                            psi_task_change() {
+           a.out-3440  [001]  6652.325629: funcgraph_entry:        0.657 us   |                                              psi_flags_change();
+           a.out-3440  [001]  6652.325631: funcgraph_entry:        1.306 us   |                                              psi_group_change();
+           a.out-3440  [001]  6652.325633: funcgraph_exit:         4.440 us   |                                            }
+           a.out-3440  [001]  6652.325634: funcgraph_entry:                   |                                            enqueue_task_fair() {
+           a.out-3440  [001]  6652.325635: funcgraph_entry:                   |                                              enqueue_entity() {
+           a.out-3440  [001]  6652.325635: funcgraph_entry:                   |                                                update_curr() {
+           a.out-3440  [001]  6652.325636: funcgraph_entry:        0.717 us   |                                                  __calc_delta();
+           a.out-3440  [001]  6652.325637: funcgraph_entry:        0.656 us   |                                                  update_min_vruntime();
+           a.out-3440  [001]  6652.325639: funcgraph_exit:         3.393 us   |                                                }
+           a.out-3440  [001]  6652.325639: funcgraph_entry:        0.900 us   |                                                __update_load_avg_se();
+           a.out-3440  [001]  6652.325641: funcgraph_entry:        0.709 us   |                                                __update_load_avg_cfs_rq();
+           a.out-3440  [001]  6652.325642: funcgraph_entry:        0.667 us   |                                                update_cfs_group();
+           a.out-3440  [001]  6652.325644: funcgraph_entry:        0.680 us   |                                                place_entity();
+           a.out-3440  [001]  6652.325645: funcgraph_exit:       + 10.884 us  |                                              }
+           a.out-3440  [001]  6652.325646: funcgraph_entry:        0.646 us   |                                              hrtick_update();
+           a.out-3440  [001]  6652.325648: funcgraph_exit:       + 13.845 us  |                                            }
+           a.out-3440  [001]  6652.325648: funcgraph_entry:                   |                                            ttwu_do_wakeup() {
+           a.out-3440  [001]  6652.325649: funcgraph_entry:                   |                                              check_preempt_curr() {
+           a.out-3440  [001]  6652.325650: funcgraph_entry:                   |                                                check_preempt_wakeup() {
+           a.out-3440  [001]  6652.325651: funcgraph_entry:        0.689 us   |                                                  update_curr();
+           a.out-3440  [001]  6652.325652: funcgraph_entry:        0.747 us   |                                                  set_next_buddy();
+           a.out-3440  [001]  6652.325654: funcgraph_entry:        0.692 us   |                                                  resched_curr();
+           a.out-3440  [001]  6652.325655: funcgraph_exit:         5.014 us   |                                                }
+           a.out-3440  [001]  6652.325656: funcgraph_exit:         6.463 us   |                                              }
+           a.out-3440  [001]  6652.325657: funcgraph_entry:        2.216 us   |                                              __traceiter_sched_wakeup();
+           a.out-3440  [001]  6652.325659: funcgraph_exit:       + 10.753 us  |                                            }
+           a.out-3440  [001]  6652.325660: funcgraph_exit:       + 31.975 us  |                                          }
+           a.out-3440  [001]  6652.325660: funcgraph_entry:        0.644 us   |                                          raw_spin_rq_unlock();
+           a.out-3440  [001]  6652.325662: funcgraph_entry:        0.641 us   |                                          _raw_spin_unlock_irqrestore();
+           a.out-3440  [001]  6652.325663: funcgraph_exit:       + 46.434 us  |                                        }
+           a.out-3440  [001]  6652.325664: funcgraph_exit:       + 47.755 us  |                                      }
+           a.out-3440  [001]  6652.325664: funcgraph_exit:       + 49.088 us  |                                    }
+           a.out-3440  [001]  6652.325665: funcgraph_entry:        0.636 us   |                                    rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325666: funcgraph_exit:       + 55.247 us  |                                  }
+           a.out-3440  [001]  6652.325667: funcgraph_exit:       + 56.595 us  |                                }
+           a.out-3440  [001]  6652.325667: funcgraph_exit:       + 58.074 us  |                              }
+           a.out-3440  [001]  6652.325668: funcgraph_entry:        0.647 us   |                              _raw_spin_lock();
+           a.out-3440  [001]  6652.325669: funcgraph_exit:       + 64.676 us  |                            }
+           a.out-3440  [001]  6652.325670: funcgraph_entry:                   |                            rcu_core_si() {
+           a.out-3440  [001]  6652.325671: funcgraph_entry:                   |                              rcu_core() {
+           a.out-3440  [001]  6652.325672: funcgraph_entry:                   |                                note_gp_changes() {
+           a.out-3440  [001]  6652.325673: funcgraph_entry:        0.687 us   |                                  _raw_spin_trylock();
+           a.out-3440  [001]  6652.325674: funcgraph_entry:                   |                                  __note_gp_changes() {
+           a.out-3440  [001]  6652.325675: funcgraph_entry:                   |                                    rcu_accelerate_cbs() {
+           a.out-3440  [001]  6652.325675: funcgraph_entry:        0.650 us   |                                      rcu_segcblist_pend_cbs();
+           a.out-3440  [001]  6652.325677: funcgraph_entry:        0.825 us   |                                      rcu_segcblist_accelerate();
+           a.out-3440  [001]  6652.325678: funcgraph_entry:        0.763 us   |                                      rcu_start_this_gp();
+           a.out-3440  [001]  6652.325680: funcgraph_exit:         4.905 us   |                                    }
+           a.out-3440  [001]  6652.325680: funcgraph_exit:         6.364 us   |                                  }
+           a.out-3440  [001]  6652.325681: funcgraph_entry:        0.679 us   |                                  _raw_spin_unlock_irqrestore();
+           a.out-3440  [001]  6652.325682: funcgraph_exit:       + 10.422 us  |                                }
+           a.out-3440  [001]  6652.325683: funcgraph_entry:        0.671 us   |                                rcu_segcblist_ready_cbs();
+           a.out-3440  [001]  6652.325684: funcgraph_exit:       + 13.276 us  |                              }
+           a.out-3440  [001]  6652.325685: funcgraph_exit:       + 14.676 us  |                            }
+           a.out-3440  [001]  6652.325686: funcgraph_exit:       + 81.705 us  |                          }
+           a.out-3440  [001]  6652.325686: funcgraph_entry:        0.644 us   |                          idle_cpu();
+           a.out-3440  [001]  6652.325688: funcgraph_exit:       + 84.529 us  |                        }
+           a.out-3440  [001]  6652.325689: funcgraph_entry:                   |                        page_counter_try_charge() {
+           a.out-3440  [001]  6652.325690: funcgraph_entry:        0.718 us   |                          propagate_protected_usage();
+           a.out-3440  [001]  6652.325691: funcgraph_entry:        0.680 us   |                          propagate_protected_usage();
+           a.out-3440  [001]  6652.325693: funcgraph_entry:        0.640 us   |                          propagate_protected_usage();
+           a.out-3440  [001]  6652.325694: funcgraph_entry:        0.676 us   |                          propagate_protected_usage();
+           a.out-3440  [001]  6652.325695: funcgraph_exit:         6.125 us   |                        }
+           a.out-3440  [001]  6652.325696: funcgraph_entry:        0.711 us   |                        refill_stock();
+           a.out-3440  [001]  6652.325697: funcgraph_exit:       ! 224.849 us |                      }
+           a.out-3440  [001]  6652.325698: funcgraph_entry:        0.644 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325699: funcgraph_entry:                   |                      mem_cgroup_charge_statistics.constprop.0() {
+           a.out-3440  [001]  6652.325700: funcgraph_entry:        0.686 us   |                        cgroup_rstat_updated();
+           a.out-3440  [001]  6652.325701: funcgraph_exit:         2.007 us   |                      }
+           a.out-3440  [001]  6652.325702: funcgraph_entry:        0.640 us   |                      memcg_check_events();
+           a.out-3440  [001]  6652.325704: funcgraph_exit:       ! 231.561 us |                    }
+           a.out-3440  [001]  6652.325705: funcgraph_entry:        0.680 us   |                    rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325706: funcgraph_exit:       ! 238.590 us |                  }
+           a.out-3440  [001]  6652.325707: funcgraph_entry:                   |                  __cgroup_throttle_swaprate() {
+           a.out-3440  [001]  6652.325707: funcgraph_entry:        0.645 us   |                    kthread_blkcg();
+           a.out-3440  [001]  6652.325709: funcgraph_entry:        0.641 us   |                    rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325710: funcgraph_exit:         3.282 us   |                  }
+           a.out-3440  [001]  6652.325711: funcgraph_entry:        0.687 us   |                  _raw_spin_lock();
+           a.out-3440  [001]  6652.325712: funcgraph_entry:        0.664 us   |                  add_mm_counter_fast();
+           a.out-3440  [001]  6652.325713: funcgraph_entry:                   |                  page_add_new_anon_rmap() {
+           a.out-3440  [001]  6652.325714: funcgraph_entry:                   |                    __mod_lruvec_page_state() {
+           a.out-3440  [001]  6652.325715: funcgraph_entry:                   |                      __mod_lruvec_state() {
+           a.out-3440  [001]  6652.325715: funcgraph_entry:        0.700 us   |                        __mod_node_page_state();
+           a.out-3440  [001]  6652.325717: funcgraph_entry:                   |                        __mod_memcg_lruvec_state() {
+           a.out-3440  [001]  6652.325717: funcgraph_entry:        0.658 us   |                          cgroup_rstat_updated();
+           a.out-3440  [001]  6652.325719: funcgraph_exit:         1.987 us   |                        }
+           a.out-3440  [001]  6652.325719: funcgraph_exit:         4.606 us   |                      }
+           a.out-3440  [001]  6652.325720: funcgraph_entry:        0.642 us   |                      rcu_read_unlock_strict();
+           a.out-3440  [001]  6652.325721: funcgraph_exit:         7.175 us   |                    }
+           a.out-3440  [001]  6652.325722: funcgraph_entry:        0.656 us   |                    __page_set_anon_rmap();
+           a.out-3440  [001]  6652.325723: funcgraph_exit:         9.832 us   |                  }
+           a.out-3440  [001]  6652.325724: funcgraph_entry:                   |                  lru_cache_add_inactive_or_unevictable() {
+           a.out-3440  [001]  6652.325725: funcgraph_entry:        0.668 us   |                    lru_cache_add();
+           a.out-3440  [001]  6652.325726: funcgraph_exit:         1.966 us   |                  }
+           a.out-3440  [001]  6652.325727: funcgraph_exit:       ! 321.976 us |                }
+           a.out-3440  [001]  6652.325727: funcgraph_exit:       ! 328.939 us |              }
+           a.out-3440  [001]  6652.325728: funcgraph_entry:                   |              __cond_resched() {
+           a.out-3440  [001]  6652.325729: funcgraph_entry:                   |                rcu_note_context_switch() {
+           a.out-3440  [001]  6652.325730: funcgraph_entry:        0.716 us   |                  rcu_qs();
+           a.out-3440  [001]  6652.325731: funcgraph_exit:         2.112 us   |                }
+           a.out-3440  [001]  6652.325732: funcgraph_entry:                   |                raw_spin_rq_lock_nested() {
+           a.out-3440  [001]  6652.325732: funcgraph_entry:        0.680 us   |                  _raw_spin_lock();
+           a.out-3440  [001]  6652.325734: funcgraph_exit:         2.060 us   |                }
+           a.out-3440  [001]  6652.325735: funcgraph_entry:        0.684 us   |                update_rq_clock();
+           a.out-3440  [001]  6652.325736: funcgraph_entry:                   |                pick_next_task_fair() {
+           a.out-3440  [001]  6652.325737: funcgraph_entry:        0.652 us   |                  update_curr();
+           a.out-3440  [001]  6652.325738: funcgraph_entry:        0.851 us   |                  pick_next_entity();
+           a.out-3440  [001]  6652.325740: funcgraph_entry:                   |                  put_prev_entity() {
+           a.out-3440  [001]  6652.325740: funcgraph_entry:                   |                    update_curr() {
+           a.out-3440  [001]  6652.325741: funcgraph_entry:        0.650 us   |                      update_min_vruntime();
+           a.out-3440  [001]  6652.325742: funcgraph_entry:        0.659 us   |                      cpuacct_charge();
+           a.out-3440  [001]  6652.325744: funcgraph_entry:                   |                      __cgroup_account_cputime() {
+           a.out-3440  [001]  6652.325744: funcgraph_entry:        0.657 us   |                        cgroup_rstat_updated();
+           a.out-3440  [001]  6652.325746: funcgraph_exit:         1.950 us   |                      }
+           a.out-3440  [001]  6652.325746: funcgraph_exit:         5.962 us   |                    }
+           a.out-3440  [001]  6652.325747: funcgraph_entry:        0.760 us   |                    __update_load_avg_se();
+           a.out-3440  [001]  6652.325749: funcgraph_entry:        0.675 us   |                    __update_load_avg_cfs_rq();
+           a.out-3440  [001]  6652.325750: funcgraph_exit:       + 10.258 us  |                  }
+           a.out-3440  [001]  6652.325751: funcgraph_entry:                   |                  put_prev_entity() {
+           a.out-3440  [001]  6652.325751: funcgraph_entry:        0.689 us   |                    update_curr();
+           a.out-3440  [001]  6652.325753: funcgraph_entry:        0.790 us   |                    __update_load_avg_se();
+           a.out-3440  [001]  6652.325754: funcgraph_entry:        0.690 us   |                    __update_load_avg_cfs_rq();
+           a.out-3440  [001]  6652.325755: funcgraph_exit:         4.911 us   |                  }
+           a.out-3440  [001]  6652.325756: funcgraph_entry:                   |                  set_next_entity() {
+           a.out-3440  [001]  6652.325757: funcgraph_entry:        0.756 us   |                    clear_buddies();
+           a.out-3440  [001]  6652.325758: funcgraph_entry:        0.720 us   |                    __update_load_avg_se();
+           a.out-3440  [001]  6652.325760: funcgraph_entry:        0.659 us   |                    __update_load_avg_cfs_rq();
+           a.out-3440  [001]  6652.325761: funcgraph_exit:         4.967 us   |                  }
+           a.out-3440  [001]  6652.325762: funcgraph_exit:       + 25.886 us  |                }
+           a.out-3440  [001]  6652.325763: funcgraph_entry:                   |                psi_task_switch() {
+           a.out-3440  [001]  6652.325763: funcgraph_entry:        0.656 us   |                  psi_flags_change();
+           a.out-3440  [001]  6652.325765: funcgraph_entry:        0.739 us   |                  iterate_groups();
+           a.out-3440  [001]  6652.325766: funcgraph_entry:        0.654 us   |                  psi_flags_change();
+           a.out-3440  [001]  6652.325768: funcgraph_entry:        0.711 us   |                  iterate_groups();
+           a.out-3440  [001]  6652.325769: funcgraph_entry:        1.298 us   |                  psi_group_change();
+           a.out-3440  [001]  6652.325771: funcgraph_entry:        0.741 us   |                  iterate_groups();
+           a.out-3440  [001]  6652.325772: funcgraph_entry:        1.005 us   |                  psi_group_change();
+           a.out-3440  [001]  6652.325774: funcgraph_entry:        0.676 us   |                  iterate_groups();
+           a.out-3440  [001]  6652.325775: funcgraph_entry:        0.918 us   |                  psi_group_change();
+           a.out-3440  [001]  6652.325777: funcgraph_entry:        0.685 us   |                  iterate_groups();
+           a.out-3440  [001]  6652.325778: funcgraph_exit:       + 15.430 us  |                }
+           a.out-3440  [001]  6652.325779: funcgraph_entry:        3.131 us   |                __traceiter_sched_switch();
+           a.out-3440  [001]  6652.325848: funcgraph_entry:                   |                finish_task_switch.isra.0() {
+           a.out-3440  [001]  6652.325848: funcgraph_entry:        0.696 us   |                  raw_spin_rq_unlock();
+           a.out-3440  [001]  6652.325850: funcgraph_exit:         2.155 us   |                }
+           a.out-3440  [001]  6652.325850: funcgraph_exit:       ! 122.376 us |              }
+           a.out-3440  [001]  6652.325851: funcgraph_entry:                   |              follow_page_mask() {
+           a.out-3440  [001]  6652.325852: funcgraph_entry:        0.672 us   |                follow_huge_addr();
+           a.out-3440  [001]  6652.325853: funcgraph_entry:        0.673 us   |                pud_huge();
+           a.out-3440  [001]  6652.325855: funcgraph_entry:        1.348 us   |                pmd_huge();
+           a.out-3440  [001]  6652.325857: funcgraph_entry:                   |                follow_page_pte() {
+           a.out-3440  [001]  6652.325857: funcgraph_entry:        0.644 us   |                  _raw_spin_lock();
+           a.out-3440  [001]  6652.325859: funcgraph_entry:        0.646 us   |                  vm_normal_page();
+           a.out-3440  [001]  6652.325860: funcgraph_entry:        0.656 us   |                  try_grab_page();
+           a.out-3440  [001]  6652.325861: funcgraph_entry:        0.699 us   |                  mark_page_accessed();
+           a.out-3440  [001]  6652.325863: funcgraph_exit:         6.173 us   |                }
+           a.out-3440  [001]  6652.325863: funcgraph_exit:       + 12.408 us  |              }
+           a.out-3440  [001]  6652.325864: funcgraph_exit:       ! 530.402 us |            }
+           a.out-3440  [001]  6652.325865: funcgraph_exit:       ! 531.733 us |          }
+           a.out-3440  [001]  6652.325866: funcgraph_entry:        0.642 us   |          up_read();
+           a.out-3440  [001]  6652.325867: funcgraph_exit:       ! 542.736 us |        }
+           a.out-3440  [001]  6652.325868: funcgraph_exit:       ! 597.705 us |      }
+           a.out-3440  [001]  6652.325868: funcgraph_exit:       ! 599.549 us |    }
+           a.out-3440  [001]  6652.325869: funcgraph_entry:                   |    _printk() {
+           a.out-3440  [001]  6652.325870: funcgraph_entry:                   |      vprintk() {
+           a.out-3440  [001]  6652.325871: funcgraph_entry:                   |        vprintk_default() {
+           a.out-3440  [001]  6652.325872: funcgraph_entry:                   |          vprintk_emit() {
+           a.out-3440  [001]  6652.325872: funcgraph_entry:                   |            vprintk_store() {
+           a.out-3440  [001]  6652.325879: funcgraph_entry:        0.766 us   |              printk_parse_prefix();
+           a.out-3440  [001]  6652.325880: funcgraph_entry:                   |              prb_reserve() {
+           a.out-3440  [001]  6652.325882: funcgraph_entry:                   |                data_alloc() {
+           a.out-3440  [001]  6652.325882: funcgraph_entry:        0.714 us   |                  get_next_lpos();
+           a.out-3440  [001]  6652.325884: funcgraph_entry:        0.725 us   |                  data_push_tail.part.0();
+           a.out-3440  [001]  6652.325885: funcgraph_exit:         3.818 us   |                }
+           a.out-3440  [001]  6652.325886: funcgraph_entry:        0.697 us   |                space_used();
+           a.out-3440  [001]  6652.325887: funcgraph_exit:         7.183 us   |              }
+           a.out-3440  [001]  6652.325888: funcgraph_entry:                   |              printk_sprint() {
+           a.out-3440  [001]  6652.325893: funcgraph_entry:        0.719 us   |                printk_parse_prefix();
+           a.out-3440  [001]  6652.325894: funcgraph_exit:         6.010 us   |              }
+           a.out-3440  [001]  6652.325895: funcgraph_entry:        0.741 us   |              prb_final_commit();
+           a.out-3440  [001]  6652.325896: funcgraph_exit:       + 23.801 us  |            }
+           a.out-3440  [001]  6652.325897: funcgraph_entry:                   |            console_trylock() {
+           a.out-3440  [001]  6652.325898: funcgraph_entry:        0.644 us   |              __printk_safe_enter();
+           a.out-3440  [001]  6652.325899: funcgraph_entry:                   |              down_trylock() {
+           a.out-3440  [001]  6652.325900: funcgraph_entry:        0.712 us   |                _raw_spin_lock_irqsave();
+           a.out-3440  [001]  6652.325901: funcgraph_entry:        0.665 us   |                _raw_spin_unlock_irqrestore();
+           a.out-3440  [001]  6652.325902: funcgraph_exit:         3.289 us   |              }
+           a.out-3440  [001]  6652.325903: funcgraph_entry:        0.644 us   |              __printk_safe_exit();
+           a.out-3440  [001]  6652.325904: funcgraph_exit:         7.329 us   |            }
+           a.out-3440  [001]  6652.325905: funcgraph_entry:                   |            console_unlock() {
+           a.out-3440  [001]  6652.325906: funcgraph_entry:                   |              prb_read_valid() {
+           a.out-3440  [001]  6652.325907: funcgraph_entry:                   |                _prb_read_valid() {
+           a.out-3440  [001]  6652.325907: funcgraph_entry:                   |                  desc_read_finalized_seq() {
+           a.out-3440  [001]  6652.325908: funcgraph_entry:        0.675 us   |                    desc_read();
+           a.out-3440  [001]  6652.325909: funcgraph_exit:         2.144 us   |                  }
+           a.out-3440  [001]  6652.325910: funcgraph_entry:        0.839 us   |                  get_data();
+           a.out-3440  [001]  6652.325912: funcgraph_entry:                   |                  desc_read_finalized_seq() {
+           a.out-3440  [001]  6652.325912: funcgraph_entry:        0.663 us   |                    desc_read();
+           a.out-3440  [001]  6652.325914: funcgraph_exit:         1.960 us   |                  }
+           a.out-3440  [001]  6652.325914: funcgraph_exit:         7.889 us   |                }
+           a.out-3440  [001]  6652.325915: funcgraph_exit:         9.222 us   |              }
+           a.out-3440  [001]  6652.325916: funcgraph_entry:                   |              prb_read_valid() {
+           a.out-3440  [001]  6652.325916: funcgraph_entry:                   |                _prb_read_valid() {
+           a.out-3440  [001]  6652.325917: funcgraph_entry:                   |                  desc_read_finalized_seq() {
+           a.out-3440  [001]  6652.325918: funcgraph_entry:        0.755 us   |                    desc_read();
+           a.out-3440  [001]  6652.325919: funcgraph_exit:         2.112 us   |                  }
+           a.out-3440  [001]  6652.325920: funcgraph_entry:        0.754 us   |                  desc_read();
+           a.out-3440  [001]  6652.325921: funcgraph_exit:         4.868 us   |                }
+           a.out-3440  [001]  6652.325922: funcgraph_exit:         6.137 us   |              }
+           a.out-3440  [001]  6652.325923: funcgraph_entry:        0.670 us   |              __printk_safe_enter();
+           a.out-3440  [001]  6652.325924: funcgraph_entry:                   |              up() {
+           a.out-3440  [001]  6652.325925: funcgraph_entry:        0.687 us   |                _raw_spin_lock_irqsave();
+           a.out-3440  [001]  6652.325926: funcgraph_entry:        0.680 us   |                _raw_spin_unlock_irqrestore();
+           a.out-3440  [001]  6652.325927: funcgraph_exit:         3.348 us   |              }
+           a.out-3440  [001]  6652.325928: funcgraph_entry:        0.640 us   |              __printk_safe_exit();
+           a.out-3440  [001]  6652.325929: funcgraph_entry:                   |              prb_read_valid() {
+           a.out-3440  [001]  6652.325930: funcgraph_entry:                   |                _prb_read_valid() {
+           a.out-3440  [001]  6652.325931: funcgraph_entry:                   |                  desc_read_finalized_seq() {
+           a.out-3440  [001]  6652.325931: funcgraph_entry:        0.700 us   |                    desc_read();
+           a.out-3440  [001]  6652.325933: funcgraph_exit:         2.070 us   |                  }
+           a.out-3440  [001]  6652.325933: funcgraph_entry:        0.708 us   |                  desc_read();
+           a.out-3440  [001]  6652.325935: funcgraph_exit:         4.709 us   |                }
+           a.out-3440  [001]  6652.325935: funcgraph_exit:         6.010 us   |              }
+           a.out-3440  [001]  6652.325936: funcgraph_exit:       + 30.908 us  |            }
+           a.out-3440  [001]  6652.325937: funcgraph_entry:                   |            __wake_up_klogd() {
+           a.out-3440  [001]  6652.325938: funcgraph_entry:        0.643 us   |              tick_nohz_tick_stopped();
+           a.out-3440  [001]  6652.325939: funcgraph_exit:         2.248 us   |            }
+           a.out-3440  [001]  6652.325939: funcgraph_exit:       + 67.902 us  |          }
+           a.out-3440  [001]  6652.325940: funcgraph_exit:       + 69.372 us  |        }
+           a.out-3440  [001]  6652.325941: funcgraph_exit:       + 70.897 us  |      }
+           a.out-3440  [001]  6652.325941: funcgraph_exit:       + 72.430 us  |    }
+           a.out-3440  [001]  6652.325942: funcgraph_exit:       ! 677.388 us |  }
