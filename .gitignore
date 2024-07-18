@@ -1,0 +1,4 @@
+actions/a.out
+*.o
+*.i
+*.s
