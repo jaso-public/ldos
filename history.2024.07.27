@@ -1,0 +1,482 @@
+    1  cd linux-source-5.15.0/
+    2  ls
+    3  cd lib/
+    4  ls
+    5  cd
+    6  git clone https://sourceware.org/git/glibc.git
+    7  ls
+    8  cd glibc/
+    9  ls
+   10  find . | grep  mmap
+   11  cd misc
+   12  vi mmap.c 
+   13  vi ./sysdeps/mach/hurd/mmap.c
+   14  vi ./misc/mmap64.c
+   15  cd ..
+   16  vi ./misc/mmap64.c
+   17  find . -type f | xargs grep __mmap
+   18  vi ./misc/mmap.c
+   19  find . -type f | xargs grep "$__mmap"
+   20  find . -type f | xargs grep "^__mmap"
+   21  vi ./misc/mmap64.c
+   22  find . -type f | xargs grep syscall
+   23  find . -type f | grep "c$"  | xargs grep syscall
+   24  find . -type f | grep "c$"  | xargs grep syscall | less
+   25  cd misc
+   26  ls
+   27  vi syscall.c
+   28  cd ..
+   29  cd linux-source-5.15.0/
+   30  ls
+   31  cat my_mmap/my_mmap.
+   32  cat my_mmap/my_mmap.c
+   33  ls
+   34  cd mm
+   35  ls
+   36  vi mmap.c
+   37  sudo passwd root
+   38  git config --global user.email "jaso@cs.wisc.edu"
+   39  git config --global user.name "jaso"
+   40  sudo apt update
+   41  sudo apt install -y zip bison build-essential cmake flex git     libedit-dev libllvm14 llvm-14-dev libclang-14-dev python3     zlib1g-dev libelf-dev libfl-dev python3-setuptools liblzma-dev     libdebuginfod-dev clang llvm libncurses-dev libcap-dev     libssl-dev binutils pahole debhelper htop sysstat debhelper s3fs 
+   42  sudo mkdir -p /usr/local/src/debian
+   43  cp *pem $!
+   44  cp /boot/config-5.15.0-113-generic .config
+   45  sed -i 's|debian|/usr/local/src/debian|g' .config
+   46  sudo apt install-y linux-source
+   47  sudo apt install -y linux-source
+   48  ls
+   49  cp /usr/src/linux-*bz2 .
+   50  tar xf *z
+   51  l
+   52  tar xf *2
+   53  ls
+   54  cd linux-source-5.15.0/
+   55  mv ../.config .
+   56  make -j 20
+   57  ls
+   58  mkdir my_mmap
+   59  vi include/linux/syscalls.h
+   60  vi arch/x86/entry/syscalls/syscall_64.tbl 
+   61  vi Makefile 
+   62  cd my_mmap/
+   63  vi MakeFile
+   64  vi ../arch/x86/entry/syscalls/syscall_64.tbl 
+   65  cd ..
+   66  cd mm
+   67  ls
+   68  grep SYSCALL *
+   69  vi mmap.c
+   70  grep SYSCALL_DEFINE6(mmap *
+   71  grep "SYSCALL_DEFINE6(mmap" *
+   72  cd ..
+   73  vi ../arch/x86/entry/syscalls/syscall_64.tbl 
+   74  vi arch/x86/entry/syscalls/syscall_64.tbl 
+   75  find . -type f
+   76  find . -type f | xargs grep SYSCALL_DEFINE6
+   77  vi ./arch/x86/kernel/sys_x86_64.c
+   78  cd my_mmap/
+   79  vi my_mmap.c
+   80  cd ..
+   81  make -j 40
+   82  cd my_mmap/
+   83  ls -al
+   84  cd ..
+   85  ls
+   86  vu Makefile 
+   87  vi Makefile 
+   88  ls -al
+   89  cat .missing-syscalls.d
+   90  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-k
+   91  sed -i 's|debian|/usr/local/src/debian|g' .config
+   92  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-k
+   93  ls -al /usr/local/src/debian
+   94  sudo cp ../*pem $!
+   95  ls -al /usr/local/src/debian
+   96  sudo cp ../*pem /usr/local/src/debian
+   97  ls -al /usr/local/src/debian
+   98  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-k
+   99  vi .config
+  100  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-k
+  101  sudo make bindeb-pkg LOCALVERSION=-my-k
+  102  ls
+  103  vi my_mmap/MakeFile 
+  104  ls my_mmap/
+  105  cat my_mmap/MakeFile 
+  106  ls
+  107  vi Makefile 
+  108  make -v
+  109  make -V
+  110  make -verbose
+  111  make --trace
+  112  make
+  113  sudo make bindeb-pkg LOCALVERSION=-my-k
+  114  ls kernel/Makefile 
+  115  cat kernel/Makefile 
+  116  cat mm/Makefile 
+  117  :q
+  118  ls
+  119  vi make Makefile 
+  120  vi  Makefile 
+  121  cd my_mmap/
+  122  cat *
+  123  ls *
+  124  make
+  125  mv my_mmap.c mymmap.c
+  126  vi mymmap.c 
+  127  vi MakeFile 
+  128  mv mymmap.c my_mmap.c
+  129  mv MakeFile Makefile
+  130  vi my_mmap.c 
+  131  cd ..
+  132  make
+  133  sudo make bindeb-pkg LOCALVERSION=-my-k
+  134  vi my_mmap/my_mmap.c 
+  135  sudo make bindeb-pkg LOCALVERSION=-my-k
+  136  vi my_mmap/my_mmap.c 
+  137  sudo make bindeb-pkg LOCALVERSION=-my-k
+  138  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-k
+  139  cd mm
+  140  find . -type f | xargs grep SYSCALL_DEFINE6
+  141  vi mmap.c
+  142  cd ..
+  143  find . -type f | xargs grep SYSCALL_DEFINE6 | grep mm
+  144  cd mm
+  145  find . -type f | xargs grep SYSCALL_DEFINE6 | grep mm
+  146  cd ..
+  147  find . -type f | xargs grep SYSCALL_DEFINE6 | grep mm
+  148  find . -type f | grep "c$" | xargs grep SYSCALL_DEFINE6 | grep mm
+  149  vi ./arch/x86/kernel/sys_x86_64.c
+  150  vi my_mmap/my_mmap.c 
+  151  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-k
+  152  vi my_mmap/my_mmap.c 
+  153  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-k
+  154  cd ..
+  155  ls
+  156  sudo dpkg -i  linux-image-5.15.152-my-k_5.15.152-my-k-2_amd64.deb linux-headers-5.15.152-my-k_5.15.152-my-k-2_amd64.deb    linux-libc-dev_5.15.152-my-k-2_amd64.deb
+  157  sudo update-grub
+  158  sudo reboot
+  159  cd linux-source-5.15.0/my_mmap/
+  160  catr my_mmap.c
+  161  cat my_mmap.c
+  162  ls
+  163  cd
+  164  ls
+  165  cd calls/
+  166  ls
+  167  cat simple.c
+  168  ls -al
+  169  pwd
+  170  ls
+  171  vi calls
+  172  mkdir calls
+  173  cd calls
+  174  vi simple.c
+  175  gcc simple.c 
+  176  vi simple.c
+  177  gcc simple.c 
+  178  vi simple.c
+  179  gcc simple.c 
+  180  vi simple.c
+  181  gcc simple.c 
+  182  ./a.out
+  183  sudo dmesg
+  184  sudo trace-cmd record -p function_graph -g sys_my_mmap  -F ./a.out
+  185  sudo apt install -y linux-tools-generic linux-tools-generic linux-tools-5.15.0-86-generic 
+  186  sudo trace-cmd record -p function_graph -g sys_my_mmap  -F ./a.out
+  187  sudo apt install -y linux-tools-generic linux-tools-generic linux-tools-5.15.0-86-generic trace-cmd
+  188  sudo trace-cmd record -p function_graph -g sys_my_mmap  -F ./a.out
+  189  cd /cat
+  190  cd /proc
+  191  ls
+  192  cat kallsyms | mmap
+  193  cat kallsyms | grep mmap
+  194  cat kallsyms | grep mmap | grep my
+  195  cd -
+  196  sudo trace-cmd record -p function_graph -g __x64_sys_my_mmap  -F ./a.out
+  197  sudo trace-cmd report
+  198  sudo trace-cmd report | simple.out
+  199  sudo trace-cmd report | tee simple.out
+  200  cp simple.c populate.c
+  201  vi populate.c 
+  202  gcc populate.c 
+  203  sudo trace-cmd record -p function_graph -g __x64_sys_my_mmap  -F ./a.out
+  204  sudo trace-cmd report | tee populate.out
+  205  vi populate.out
+  206  ls
+  207  vi filemmap.c
+  208  gcc filemmap.c 
+  209  echo "foo" > example.txt
+  210  ls
+  211  ls -al
+  212  ./a.out
+  213  ls -al
+  214  sudo trace-cmd record -p function_graph -g __x64_sys_my_mmap  -F ./a.out
+  215  sudo trace-cmd report | tee filemmap.out
+  216  vi filemmap.c
+  217  gcc filemmap.c 
+  218  vi filemmap.c
+  219  gcc filemmap.c 
+  220  ./a.out
+  221  sudo trace-cmd record -p function_graph -g __x64_sys_my_mmap  -F ./a.out
+  222  sudo trace-cmd report | tee filemmap.out
+  223  ls
+  224  cp filemmap.c filemmap_pop.c
+  225  vi filemmap_pop.c 
+  226  gcc filemmap_pop.c 
+  227  sudo trace-cmd report | tee filemmap_pop.out
+  228  uname -a
+  229  cd calls
+  230  vi simple.out 
+  231  man mmap
+  232  cd calls/
+  233  ls
+  234  vi filemmap_pop.out 
+  235  cd ..
+  236  mkdir picross
+  237  wget https://liouh.com/picross/
+  238  vi index.html 
+  239  wget js/picross.js?20190803
+  240  wget https://liouh.com/picross/js/picross.js?20190803
+  241  ;s
+  242  ls
+  243  mv index.html picross
+  244  mv 'picross.js?20190803' picross
+  245  cd picross/
+  246  ls
+  247  mv 'picross.js?20190803' picross.js 
+  248  vi picross.js 
+  249  ls
+  250  find .
+  251  cd ..
+  252  pwd
+  253  exit
+  254  cd linux-source-5.15.0/
+  255  ls
+  256  cd my_mmap/
+  257  ls
+  258  vi my_mmap.c 
+  259  ls /boot
+  260  ls -al /boot
+  261  cd calls/
+  262  vi simple.out 
+  263  cd ../linux-source-5.15.0/
+  264  vi include/linux/syscalls.h
+  265  vi arch/x86/entry/syscalls/syscall_64.tbl 
+  266  vi include/linux/syscalls.h
+  267  vi my_mmap/my_mmap.c 
+  268  vi mm/mmap.c 
+  269  vi my_mmap/my_mmap.c 
+  270  make 
+  271  make -j 40
+  272  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-m
+  273  vi my_mmap/my_mmap.c 
+  274  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-m
+  275  vi mm/mmap.c
+  276  ci my_mmap/my_mmap.
+  277  ci my_mmap/my_mmap.c
+  278  ls my_mmap/
+  279  vi my_mmap/my_mmap.c
+  280  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-m
+  281  vi my_mmap/my_mmap.c
+  282  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-m
+  283  vi my_mmap/my_mmap.c
+  284  sudo make -j 40 bindeb-pkg LOCALVERSION=-my-m
+  285  history
+  286  ls
+  287  cd ..
+  288  ls
+  289  sudo dpkg -i linux-headers-5.15.152-my-m_5.15.152-my-m-3_amd64.deb    linux-image-5.15.152-my-m-dbg_5.15.152-my-m-3_amd64.deb 
+  290  sudo dpkg -i linux-headers-5.15.152-my-m_5.15.152-my-m-3_amd64.deb    linux-libc-dev_5.15.152-my-m-3_amd64.deb
+  291  sudo grun-update
+  292  sudo grub-update
+  293  history | grep grub
+  294  sudo update-grub
+  295  sudo reboot
+  296  uname -a
+  297  sudo reboot
+  298  sudo update-grub
+  299  sudo dpkg -i linux-headers-5.15.152-my-m_5.15.152-my-m-3_amd64.deb    linux-libc-dev_5.15.152-my-m-3_amd64.deb
+  300  sudo update-grub
+  301  ls /boot
+  302  ls
+  303  sudo dpkg -i linux-headers-5.15.152-my-m_5.15.152-my-m-3_amd64.deb    linux-libc-dev_5.15.152-my-m-3_amd64.deb linux-image-5.15.152-my-m_5.15.152-my-m-3_amd64.deb 
+  304  sudo update-grub
+  305  sudo vi /etc/default/grub.d/init-select.cfg
+  306  sudo vi /etc/default/grub
+  307  sudo reboot
+  308  cd linux-source-5.15.0/
+  309  ls
+  310  cd arch
+  311  ls 
+  312  cd x86/
+  313  ls
+  314  cd mm
+  315  ls
+  316  exit
+  317  uname -a
+  318  vi calls
+  319  cd calls/
+  320  ls
+  321  cp simple.c simple-unmap.c
+  322  vi simple-unmap.c 
+  323  gcc simple-unmap.c 
+  324  vi simple-unmap.c 
+  325  gcc simple-unmap.c 
+  326  ./a.out
+  327  sudo vi /etc/default/grub.d/init-select.cfg
+  328  sudo trace-cmd record -p function_graph -g __x64_sys_my_munmap  -F ./a.out
+  329  sudo trace-cmd report | tee my_munmap
+  330  cd ..
+  331  git clone https://github.com/jaso-public/ldos.git
+  332  cd ldos/
+  333  mv ../calls/ .
+  334  mv calls/ actions
+  335  mkdir syscalls
+  336  cd ..
+  337  ls
+  338  cd linux-source-5.15.0/
+  339  ls
+  340  cd my_mmap/
+  341  ls
+  342  cp my_mmap.c ~/ldos/syscalls/
+  343  cp Makefile ~/ldos/syscalls/
+  344  cd
+  345  cd ldos/
+  346  cd syscalls/
+  347  cd ..
+  348  git status
+  349  git add
+  350  git add .
+  351  cd actions
+  352  ls
+  353  ls -al
+  354  rm trace.dat 
+  355  cat my_munmap 
+  356  mkdir traces
+  357  mv my_munmap traces/my_unmap.out
+  358  ls
+  359  mv *out traces/
+  360  ls
+  361  cat example.txt 
+  362  cd ..
+  363  ls
+  364  git status
+  365  git add .
+  366  git status
+  367  git commit -m 'initial test actions'
+  368  git push 
+  369  cd syscall
+  370  cd syscalls/
+  371  vi READ.ME
+  372  vi READ.ME 
+  373  git add READ.ME 
+  374  git commit -m "instructions for making the syscalls"
+  375  git push
+  376  cd
+  377  cd linux-source-5.15.0/
+  378  vi Makefile 
+  379  grep -i extra *
+  380  grep  EXTRA *
+  381  grep CF *
+  382  cd ~/ldos/actions/
+  383  gcc -save-temps simple.c 
+  384  ls -al
+  385  cd -
+  386  vi Makefile
+  387  vi .config
+  388  grep CFLAG .config
+  389  vi Makefile
+  390  make clean
+  391  sudo make clean
+  392  make -j 40
+  393  make -j 40 -v
+  394  make -j 40 -V
+  395  make -j 40 -d
+  396  sudo make clean
+  397  make -j 40 -d
+  398  make -ggg
+  399  make -n
+  400  vi t
+  401  rm t
+  402  vi Makefile
+  403  make -n
+  404  vi t
+  405  sudo make clean
+  406  make -j 40
+  407  cd mm
+  408  ls
+  409  vi mmap.i
+  410  cd linux-source-5.15.0/
+  411  vi Makefile 
+  412  cat arch/x86/entry/syscalls/syscall_64.tbl
+  413  :q
+  414  vi include/linux/syscalls.h
+  415  ls
+  416  cd ldos/actions/
+  417  sudo trace-cmd record -p function_graph -g __x64_sys_my_munmap  -F ./a.out
+  418  ls
+  419  gcc populate.c 
+  420  sudo trace-cmd record -p function_graph -g __x64_sys_my_mmap  -F ./a.out
+  421  sudo trace-cmd report
+  422  :
+  423  cd ~
+  424  cd linux-source-5.15.0/mm/
+  425  vi mm_gup.i
+  426  ls
+  427  ls *gup*
+  428  vi gup.i
+  429  cd
+  430  cd ldos/
+  431  cd actions/
+  432  gcc simple-unmap.c 
+  433  sudo trace-cmd record -p function_graph -g __x64_sys_my_mmap  -F ./a.out
+  434  sudo trace-cmd report
+  435  ./a.out
+  436  gcc simple-unmap.c 
+  437  ./a.out
+  438  gcc simple-unmap.c 
+  439  ./a.out
+  440  sudo trace-cmd record -p function_graph -g __x64_sys_my_munmap  -F ./a.out
+  441  sudo trace-cmd report
+  442  sudo trace-cmd report | less
+  443  exit
+  444  cd linux-source-5.15.0/mm
+  445  ls
+  446  vi mmap.i
+  447  wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.10.tar.xz
+  448  tar xf linux-6.10.tar.xz 
+  449  cd linux-6.10/
+  450  cp /boot/config-5.15.152-my-m .config
+  451  make menuconfig
+  452  make -j 40
+  453  sudo make modules_install
+  454  sudo make install
+  455  sudo update-grub
+  456  sudo reboot
+  457  uname -a
+  458  uname -r
+  459  sudo lsmod
+  460  top
+  461  ps aux
+  462  ps aux | grep kworker
+  463  ps aux | grep kworker | cut -d '[' -f2
+  464  ps aux | grep kworker | cut -d '[' -f2 | sort
+  465  cd /proc
+  466  ls
+  467  cd sysvipc/
+  468  ls
+  469  ls -al
+  470  cat shm
+  471  cat sem
+  472  cat msg
+  473  ls
+  474  cd ldos/
+  475  ls
+  476  git status
+  477  git add *
+  478  git commit -m "stuff before the cloudlab machine goes away"
+  479  git push
+  480  ls
+  481  history
+  482  cat history > history.2024.07.27
